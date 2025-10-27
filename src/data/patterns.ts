@@ -167,7 +167,7 @@ export const patterns: Pattern[] = [
     name: "Custom",
     category: "other",
     cells: [],
-    description: "Create your own pattern by clicking cells on the grid.",
+    description: "Create your own pattern by clicking cells on the grid. Note: Selecting this will pause the simulation.",
     interestingFact: "Start with a blank canvas and design your own patterns! Try creating symmetrical shapes, or just experiment to see what interesting behaviors emerge. Some of the most fascinating patterns in the Game of Life were discovered through experimentation.",
   },
 ];

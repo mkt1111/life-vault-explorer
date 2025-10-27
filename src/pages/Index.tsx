@@ -136,6 +136,7 @@ const Index = () => {
     if (pattern.id === "custom") {
       setGrid(newGrid);
       setGeneration(0);
+      setIsRunning(false);
       toast("Click cells on the grid to create your custom pattern");
       return;
     }
