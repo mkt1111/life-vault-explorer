@@ -43,17 +43,19 @@ export const PatternLibrary = ({ onSelectPattern, selectedPattern }: PatternLibr
         >
           All
         </Button>
-        {Object.entries(patternCategories).map(([key, category]) => (
-          <Button
-            key={key}
-            variant={selectedCategory === key ? "default" : "outline"}
-            size="sm"
-            onClick={() => setSelectedCategory(key)}
-            className={selectedCategory === key ? "bg-gradient-primary" : ""}
-          >
-            {category.name}
-          </Button>
-        ))}
+        {Object.entries(patternCategories)
+          .sort(([, a], [, b]) => a.name.localeCompare(b.name))
+          .map(([key, category]) => (
+            <Button
+              key={key}
+              variant={selectedCategory === key ? "default" : "outline"}
+              size="sm"
+              onClick={() => setSelectedCategory(key)}
+              className={selectedCategory === key ? "bg-gradient-primary" : ""}
+            >
+              {category.name}
+            </Button>
+          ))}
       </div>
 
       <ScrollArea className="flex-1">
