@@ -147,7 +147,7 @@ const Index = () => {
 
     setGrid(newGrid);
     setGeneration(0);
-    setIsRunning(false);
+    // Keep the simulation running if it was already running
     toast(`Loaded ${pattern.name}`);
   };
 
