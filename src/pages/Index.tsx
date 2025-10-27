@@ -184,12 +184,55 @@ const Index = () => {
           </div>
 
           {/* Center - Game Grid */}
-          <div className="flex items-start justify-center">
+          <div className="flex flex-col items-center gap-6">
             <GameGrid
               grid={grid}
               onCellClick={handleCellClick}
               cellSize={CELL_SIZE}
             />
+            
+            {/* Rules Section */}
+            <div className="w-full max-w-[800px] p-6 bg-card rounded-lg border border-border">
+              <h3 className="text-xl font-bold mb-4 text-primary">The Rules</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="flex gap-3 items-start">
+                  <span className="text-primary font-bold text-lg">1.</span>
+                  <div>
+                    <span className="font-semibold text-foreground">Birth:</span>
+                    <span className="text-sm text-muted-foreground ml-2">
+                      A dead cell with exactly 3 live neighbors becomes alive
+                    </span>
+                  </div>
+                </div>
+                <div className="flex gap-3 items-start">
+                  <span className="text-primary font-bold text-lg">2.</span>
+                  <div>
+                    <span className="font-semibold text-foreground">Survival:</span>
+                    <span className="text-sm text-muted-foreground ml-2">
+                      A live cell with 2 or 3 live neighbors stays alive
+                    </span>
+                  </div>
+                </div>
+                <div className="flex gap-3 items-start">
+                  <span className="text-destructive font-bold text-lg">3.</span>
+                  <div>
+                    <span className="font-semibold text-foreground">Underpopulation:</span>
+                    <span className="text-sm text-muted-foreground ml-2">
+                      A live cell with fewer than 2 neighbors dies
+                    </span>
+                  </div>
+                </div>
+                <div className="flex gap-3 items-start">
+                  <span className="text-destructive font-bold text-lg">4.</span>
+                  <div>
+                    <span className="font-semibold text-foreground">Overpopulation:</span>
+                    <span className="text-sm text-muted-foreground ml-2">
+                      A live cell with more than 3 neighbors dies
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right Sidebar - Info Panel */}
