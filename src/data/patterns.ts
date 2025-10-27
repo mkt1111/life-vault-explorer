@@ -1,7 +1,7 @@
 export interface Pattern {
   id: string;
   name: string;
-  category: "still-life" | "oscillator" | "spaceship" | "methuselah" | "gun" | "other";
+  category: "still-life" | "oscillator" | "spaceship" | "methuselah" | "gun" | "puffer" | "rake" | "wickstretcher" | "breeder" | "fuse" | "reflector" | "converter" | "other";
   cells: [number, number][];
   description: string;
   interestingFact: string;
@@ -351,6 +351,41 @@ export const patternCategories = {
     name: "Guns",
     description: "Patterns that create other patterns indefinitely.",
     color: "hsl(340 82% 52%)",
+  },
+  "puffer": {
+    name: "Puffers",
+    description: "Moving patterns that leave debris behind.",
+    color: "hsl(280 65% 60%)",
+  },
+  "rake": {
+    name: "Rakes",
+    description: "Patterns that emit spaceships while moving.",
+    color: "hsl(160 70% 45%)",
+  },
+  "wickstretcher": {
+    name: "Wickstretchers",
+    description: "Patterns that grow by extending a linear wick.",
+    color: "hsl(200 80% 50%)",
+  },
+  "breeder": {
+    name: "Breeders",
+    description: "Patterns with quadratic population growth.",
+    color: "hsl(320 75% 55%)",
+  },
+  "fuse": {
+    name: "Fuses",
+    description: "Linear patterns that burn away over time.",
+    color: "hsl(35 90% 55%)",
+  },
+  "reflector": {
+    name: "Reflectors",
+    description: "Patterns that bounce gliders at angles.",
+    color: "hsl(260 70% 60%)",
+  },
+  "converter": {
+    name: "Converters",
+    description: "Patterns that transform spaceships.",
+    color: "hsl(180 65% 50%)",
   },
   "other": {
     name: "Other",
