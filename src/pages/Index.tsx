@@ -11,11 +11,27 @@ const GRID_COLS = 80;
 const CELL_SIZE = 10;
 
 const Index = () => {
-  const [grid, setGrid] = useState<boolean[][]>(() =>
-    Array(GRID_ROWS)
+  // Initialize with a glider pattern so users see something immediately
+  const [grid, setGrid] = useState<boolean[][]>(() => {
+    const initialGrid = Array(GRID_ROWS)
       .fill(null)
-      .map(() => Array(GRID_COLS).fill(false))
-  );
+      .map(() => Array(GRID_COLS).fill(false));
+    
+    // Place glider in center
+    const centerRow = Math.floor(GRID_ROWS / 2);
+    const centerCol = Math.floor(GRID_COLS / 2);
+    const gliderCells: [number, number][] = [[0, 1], [1, 2], [2, 0], [2, 1], [2, 2]];
+    
+    gliderCells.forEach(([row, col]) => {
+      const newRow = centerRow + row - 5;
+      const newCol = centerCol + col - 5;
+      if (newRow >= 0 && newRow < GRID_ROWS && newCol >= 0 && newCol < GRID_COLS) {
+        initialGrid[newRow][newCol] = true;
+      }
+    });
+    
+    return initialGrid;
+  });
   const [isRunning, setIsRunning] = useState(false);
   const [speed, setSpeed] = useState(200);
   const [generation, setGeneration] = useState(0);
@@ -83,8 +99,9 @@ const Index = () => {
   };
 
   const handlePlayPause = () => {
-    setIsRunning(!isRunning);
-    toast(isRunning ? "Simulation paused" : "Simulation running");
+    const newRunningState = !isRunning;
+    setIsRunning(newRunningState);
+    toast(newRunningState ? "Simulation running" : "Simulation paused");
   };
 
   const handleStep = () => {
