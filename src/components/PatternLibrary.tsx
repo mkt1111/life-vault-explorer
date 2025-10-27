@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { patterns, patternCategories, Pattern } from "@/data/patterns";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface PatternLibraryProps {
   onSelectPattern: (pattern: Pattern) => void;
@@ -15,12 +15,6 @@ export const PatternLibrary = ({ onSelectPattern, selectedPattern }: PatternLibr
     ? patterns.filter((p) => p.category === selectedCategory).sort((a, b) => a.name.localeCompare(b.name))
     : patterns.slice().sort((a, b) => a.name.localeCompare(b.name));
 
-  // Auto-select first pattern when category changes
-  useEffect(() => {
-    if (filteredPatterns.length > 0) {
-      onSelectPattern(filteredPatterns[0]);
-    }
-  }, [selectedCategory]);
 
 
   return (
