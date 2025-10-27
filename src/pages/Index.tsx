@@ -132,6 +132,14 @@ const Index = () => {
       .fill(null)
       .map(() => Array(GRID_COLS).fill(false));
 
+    // For custom pattern, just clear and let user draw
+    if (pattern.id === "custom") {
+      setGrid(newGrid);
+      setGeneration(0);
+      toast("Click cells on the grid to create your custom pattern");
+      return;
+    }
+
     // Calculate center position
     const centerRow = Math.floor(GRID_ROWS / 2);
     const centerCol = Math.floor(GRID_COLS / 2);
