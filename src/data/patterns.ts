@@ -314,6 +314,183 @@ export const patterns: Pattern[] = [
     year: 2015,
   },
 
+  // Puffers
+  {
+    id: "switch-engine",
+    name: "Switch Engine",
+    category: "puffer",
+    cells: [[0, 1], [0, 2], [1, 0], [2, 1], [2, 3], [2, 4], [3, 3], [3, 4], [3, 5]],
+    description: "A chaotic pattern that grows indefinitely as a puffer.",
+    interestingFact: "The Switch Engine is technically a methuselah that becomes a puffer! It creates debris while moving, exhibiting linear growth. With just 8 cells, it creates an incredibly complex growing pattern.",
+    discoverer: "Charles Corderman",
+    year: 1971,
+  },
+  {
+    id: "puffer-1",
+    name: "Puffer 1",
+    category: "puffer",
+    cells: [
+      [0, 2], [0, 3], [0, 4], [0, 8], [0, 9], [0, 10],
+      [1, 1], [1, 5], [1, 7], [1, 11],
+      [2, 1], [2, 5], [2, 7], [2, 11],
+      [3, 0], [3, 6], [3, 12],
+      [4, 2], [4, 3], [4, 4], [4, 8], [4, 9], [4, 10],
+    ],
+    description: "A simple puffer that leaves blocks behind.",
+    interestingFact: "Puffer 1 is one of the simplest puffers, leaving a trail of blocks as it travels. It demonstrates how complex behavior emerges from simple starting patterns.",
+    year: 1971,
+  },
+
+  // Rakes
+  {
+    id: "cordership",
+    name: "Cordership",
+    category: "rake",
+    cells: [
+      [0, 0], [0, 1], [0, 2],
+      [1, 0], [1, 2],
+      [2, 0], [2, 2],
+      [3, 0], [3, 1], [3, 2],
+      [5, 6], [5, 7],
+      [6, 6], [6, 8],
+      [7, 6],
+    ],
+    description: "A spaceship that emits gliders, acting as a moving gun.",
+    interestingFact: "The Cordership is a rake - it travels while periodically emitting gliders. Named after Charles Corderman, it's a key building block for creating breeder patterns.",
+    discoverer: "Charles Corderman",
+    year: 1971,
+  },
+  {
+    id: "backrake-1",
+    name: "Backrake 1",
+    category: "rake",
+    cells: [
+      [0, 1], [0, 2], [0, 3],
+      [1, 0], [1, 3],
+      [2, 3],
+      [3, 2],
+      [5, 5], [5, 6], [5, 7],
+      [6, 5],
+      [7, 6],
+    ],
+    description: "A rake that emits gliders behind it as it moves forward.",
+    interestingFact: "Backrakes are particularly useful for creating patterns that leave a controlled stream of gliders behind them. They're essential components in many complex constructions.",
+    year: 1971,
+  },
+
+  // Wickstretchers
+  {
+    id: "venetian-blinds",
+    name: "Venetian Blinds",
+    category: "wickstretcher",
+    cells: [
+      [0, 0], [0, 1],
+      [1, 0], [1, 2],
+      [2, 1], [2, 2],
+      [4, 4], [4, 5],
+      [5, 4], [5, 6],
+      [6, 5], [6, 6],
+    ],
+    description: "A simple wickstretcher that extends a growing wick.",
+    interestingFact: "Wickstretchers grow by extending a linear 'wick' of repeating cells. They demonstrate linear growth in a unique way compared to puffers.",
+    year: 1972,
+  },
+
+  // Breeders
+  {
+    id: "breeder-1-concept",
+    name: "Breeder Concept",
+    category: "breeder",
+    cells: [
+      [0, 0], [0, 1], [0, 2],
+      [1, 0], [1, 3],
+      [2, 0], [2, 3],
+      [3, 0], [3, 1], [3, 2],
+      [5, 5], [5, 6], [5, 7],
+      [6, 5], [6, 8],
+      [7, 5], [7, 8],
+      [8, 5], [8, 6], [8, 7],
+    ],
+    description: "Simplified representation of a breeder pattern.",
+    interestingFact: "Breeders create an exponentially growing number of objects (usually guns or rakes), achieving quadratic population growth. They're some of the most complex patterns in Life!",
+    discoverer: "Bill Gosper",
+    year: 1971,
+  },
+
+  // Fuses
+  {
+    id: "fuse",
+    name: "Simple Fuse",
+    category: "fuse",
+    cells: [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7]],
+    description: "A line of cells that 'burns' away over time.",
+    interestingFact: "Fuses are linear patterns that disappear over time, sometimes leaving stable debris. They can be used as timing mechanisms in larger constructions.",
+    year: 1970,
+  },
+
+  // Reflectors
+  {
+    id: "snark",
+    name: "Snark",
+    category: "reflector",
+    cells: [
+      [0, 14], [0, 15],
+      [1, 14], [1, 15], [1, 16],
+      [2, 18], [2, 19],
+      [3, 12], [3, 13], [3, 14], [3, 15], [3, 17], [3, 18], [3, 20], [3, 21],
+      [4, 12], [4, 13], [4, 15], [4, 16], [4, 17], [4, 18], [4, 19], [4, 20],
+      [5, 15], [5, 16], [5, 17], [5, 18], [5, 19],
+      [6, 16], [6, 17], [6, 18], [6, 19],
+      [7, 20],
+      [9, 6], [9, 7],
+      [10, 7], [10, 14], [10, 15],
+      [11, 7], [11, 8], [11, 9], [11, 14], [11, 15],
+      [12, 8], [12, 9],
+      [18, 18], [18, 19],
+      [19, 18],
+      [20, 19], [20, 20], [20, 21],
+      [21, 21],
+      [28, 0], [28, 1], [28, 2],
+      [29, 2],
+      [30, 1],
+    ],
+    description: "A stable reflector that bounces gliders at 90 degrees.",
+    interestingFact: "Discovered in 2013 by Mike Playle, the Snark is one of the most important stable reflectors. It can turn gliders at right angles with a repeat time of 43 generations.",
+    discoverer: "Mike Playle",
+    year: 2013,
+  },
+  {
+    id: "bumper",
+    name: "Bumper",
+    category: "reflector",
+    cells: [
+      [0, 2], [0, 3],
+      [1, 2], [1, 3],
+      [3, 0], [3, 1],
+      [4, 0], [4, 1],
+    ],
+    description: "A simple pattern that can reflect gliders.",
+    interestingFact: "The Bumper uses two blocks to bounce gliders. It's one of the simpler reflector mechanisms.",
+    year: 1971,
+  },
+
+  // Converters  
+  {
+    id: "converter-concept",
+    name: "Converter",
+    category: "converter",
+    cells: [
+      [0, 0], [0, 1],
+      [1, 0], [1, 2],
+      [2, 1], [2, 2],
+      [5, 4], [5, 5],
+      [6, 4],
+      [7, 5],
+    ],
+    description: "Patterns that transform one spaceship into another.",
+    interestingFact: "Converters are specialized patterns that can transform one type of spaceship into another type, or change the direction/phase of spaceships. They're crucial for complex circuitry in Life.",
+    year: 1972,
+  },
 
   // Other
   {
