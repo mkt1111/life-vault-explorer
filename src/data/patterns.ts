@@ -380,19 +380,16 @@ export const patterns: Pattern[] = [
 
   // Wickstretchers
   {
-    id: "venetian-blinds",
-    name: "Venetian Blinds",
+    id: "fuse-burner",
+    name: "Fuse Burner",
     category: "wickstretcher",
     cells: [
-      [0, 0], [0, 1],
-      [1, 0], [1, 2],
-      [2, 1], [2, 2],
-      [4, 4], [4, 5],
-      [5, 4], [5, 6],
-      [6, 5], [6, 6],
+      [0, 0], [0, 1], [0, 2],
+      [1, 2],
+      [2, 1],
     ],
-    description: "A simple wickstretcher that extends a growing wick.",
-    interestingFact: "Wickstretchers grow by extending a linear 'wick' of repeating cells. They demonstrate linear growth in a unique way compared to puffers.",
+    description: "A small pattern that 'burns' along a fuse, creating a wickstretcher effect.",
+    interestingFact: "Wickstretchers grow by extending a linear 'wick' of repeating cells. They're a rare category of patterns that demonstrate linear growth in a unique way.",
     year: 1972,
   },
 
@@ -476,19 +473,19 @@ export const patterns: Pattern[] = [
 
   // Converters  
   {
-    id: "converter-concept",
-    name: "Converter",
+    id: "syringe",
+    name: "Syringe",
     category: "converter",
     cells: [
-      [0, 0], [0, 1],
-      [1, 0], [1, 2],
-      [2, 1], [2, 2],
-      [5, 4], [5, 5],
-      [6, 4],
-      [7, 5],
+      [0, 2], [0, 3],
+      [1, 2], [1, 3],
+      [3, 0], [3, 1],
+      [4, 0], [4, 1],
+      [6, 4], [6, 5],
+      [7, 4], [7, 5],
     ],
-    description: "Patterns that transform one spaceship into another.",
-    interestingFact: "Converters are specialized patterns that can transform one type of spaceship into another type, or change the direction/phase of spaceships. They're crucial for complex circuitry in Life.",
+    description: "A stable converter that transforms gliders into other objects.",
+    interestingFact: "Converters transform one type of spaceship into another. The Syringe is one of the classic examples, using stable blocks as a catalytic mechanism to change glider trajectories and types.",
     year: 1972,
   },
 
