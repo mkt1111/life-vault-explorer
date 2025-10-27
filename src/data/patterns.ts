@@ -369,7 +369,7 @@ export const patterns: Pattern[] = [
     id: "switch-engine",
     name: "Switch Engine",
     category: "puffer",
-    cells: [[0, 1], [0, 2], [1, 0], [2, 1], [2, 3], [2, 4], [3, 3], [3, 4], [3, 5]],
+    cells: [[0, 1], [0, 3], [1, 0], [2, 1], [2, 4], [3, 3], [3, 4], [3, 5]],
     description: "A chaotic pattern that grows indefinitely as a puffer.",
     interestingFact: "The Switch Engine is technically a methuselah that becomes a puffer! It creates debris while moving, exhibiting linear growth. With just 8 cells, it creates an incredibly complex growing pattern.",
     discoverer: "Charles Corderman",
